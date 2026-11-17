@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plataforma Académica de Enfermería · Grupo 02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef3f1;--c:#fff;--fg:#10262b;--mu:#5a6d70;--bd:#d5e0dd;--pr:#0b5d66;--ob:#fff;--th:#f2f7f6;--hd:#0b4f58;--okb:#dff3e8;--okt:#17653f;--wb:#fdf0d0;--wt:#7a4f00;--eb:#e5e9fa;--et:#34479a;--er:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a1d;--c:#14262a;--fg:#e3eeee;--mu:#93aaad;--bd:#28403f;--pr:#4fb8c0;--ob:#062a2e;--th:#1a3236;--hd:#0a2f35;--okb:#16402d;--okt:#8fdcb4;--wb:#47370f;--wt:#f2cf7a;--eb:#252e5c;--et:#b8c4f5;--er:#ff8a80}}
+:root[data-theme="dark"]{--bg:#0d1a1d;--c:#14262a;--fg:#e3eeee;--mu:#93aaad;--bd:#28403f;--pr:#4fb8c0;--ob:#062a2e;--th:#1a3236;--hd:#0a2f35;--okb:#16402d;--okt:#8fdcb4;--wb:#47370f;--wt:#f2cf7a;--eb:#252e5c;--et:#b8c4f5;--er:#ff8a80}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{font:15px/1.5 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;margin:0;background:var(--bg);color:var(--fg)}
+h1{font:600 27px/1.15 Fraunces,Georgia,serif;margin:2px 0 4px;letter-spacing:-.01em}
+header{background:var(--hd);color:#fff;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;opacity:.3;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='34'%3E%3Cpath d='M0 20H70l6-10 7 22 7-30 7 18h18l5-6 6 6H240' fill='none' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E") repeat-x}
+.hd{max-width:1120px;margin:auto;padding:18px 20px 34px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;position:relative;z-index:1}
+.brand{display:flex;gap:12px;align-items:center}.mark{width:44px;height:44px;border-radius:12px;background:#fff;color:var(--hd);display:grid;place-items:center}
+.bt{font:600 22px/1.1 Fraunces,Georgia,serif}.bs{font-size:13px;opacity:.85;margin-top:2px}
+.ses{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.sl{margin:0;display:inline;font-size:13px;font-weight:600}
+.rol{background:#fff;color:var(--hd);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700}
+header select{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}header option{color:#10262b;background:#fff}
+header button.g{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}header :focus-visible{outline-color:#fff}
+.shell{max-width:1120px;margin:auto;padding:22px 20px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:26px;align-items:start}
+nav{display:flex;flex-direction:column;gap:2px;position:sticky;top:12px}
+nav button{text-align:left;background:transparent;color:var(--fg);border:0;border-left:3px solid transparent;border-radius:0 8px 8px 0;padding:9px 12px;font-weight:500}
+nav button:hover{background:var(--th);filter:none}nav button.on{background:var(--c);border-left-color:var(--pr);font-weight:700;color:var(--pr)}
+main{min-width:0}.c{background:var(--c);border:1px solid var(--bd);border-radius:12px;padding:16px 18px;margin-bottom:14px;overflow-x:auto}
+.s,.n{color:var(--mu);font-size:13px}.s{margin:0 0 14px}
+table{border-collapse:collapse;width:100%}th{font-weight:600;font-size:13px;color:var(--mu);text-align:left;border-bottom:2px solid var(--bd);padding:6px 10px}
+td{border-bottom:1px solid var(--bd);padding:9px 10px;vertical-align:top}tr:last-child td{border-bottom:0}
+.ch{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:600}.ok{background:var(--okb);color:var(--okt)}.wa{background:var(--wb);color:var(--wt)}.ex{background:var(--eb);color:var(--et)}.in{background:var(--th);color:var(--pr);border:1px solid var(--bd)}
+label{display:block;font-weight:600;font-size:13px;margin:12px 0 4px}
+input,select,textarea{font:inherit;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--c);color:var(--fg);max-width:100%}textarea{width:100%}
+button{font:inherit;font-weight:600;padding:8px 14px;border-radius:8px;border:1px solid var(--pr);background:var(--pr);color:var(--ob);cursor:pointer}button:hover{filter:brightness(1.1)}
+button.g{background:var(--c);color:var(--fg);border-color:var(--bd)}:focus-visible{outline:3px solid var(--pr);outline-offset:2px}
+.m{border:1px solid var(--bd);border-left:5px solid var(--er);border-radius:10px;padding:10px 14px;margin-bottom:14px;background:var(--c)}.row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+@media(max-width:760px){.shell{grid-template-columns:1fr;padding:14px;gap:14px}nav{flex-direction:row;overflow-x:auto;position:static;gap:6px}nav button{white-space:nowrap;border:1px solid var(--bd);border-radius:999px;background:var(--c)}nav button.on{background:var(--pr);color:var(--ob);border-color:var(--pr)}h1{font-size:23px}}
+.out nav{display:none}.out .shell{grid-template-columns:1fr;max-width:760px}.lc{max-width:440px}.lc input{width:100%}.who{font-size:13px;opacity:.9}
+.dl{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--pr);color:var(--ob);font-weight:600;text-decoration:none}
+</style></head><body>
+<header><div class="hd"><div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z" fill="currentColor"/></svg></span><div><div class="bt">Plataforma Académica</div><div class="bs">Carrera de Enfermería · Prácticas · Grupo 02</div></div></div>
+<div class="ses" id="ses"></div></div></header>
+<div class="shell"><nav id="nav" aria-label="Módulos"></nav><main id="main"></main></div>
+<script>
+const AMB=["Sala de simulación","Servicio hospitalario ficticio","Centro de salud ficticio"],EXT=[0,1,1],HOY="2026-11-10";
+const N={};["Uno","Dos","Tres","Cuatro","Cinco"].forEach((n,i)=>N["E-0"+(i+1)]="Estudiante Ficticio "+n);
+Object.assign(N,{"D-01":"Docente Tutor Ficticio Uno","D-02":"Docente Tutor Ficticio Dos","I-01":"Instructor de Campo Ficticio Uno","I-02":"Instructor de Campo Ficticio Dos","C-01":"Coordinación de Prácticas Ficticia","A-01":"Administración Ficticia"});
+const ROLN={E:"Estudiante",D:"Docente tutor",I:"Instructor de campo",C:"Coordinación",A:"Administración"};
+const MOD=[["mis","Mis actividades","E"],["reg","Registrar actividad","E"],["ext","Horas de extensión","ECA"],["pend","Pendientes de validación","D"],["req","Requisitos previos","CA"],["cupos","Prácticas externas","EDICA"],["cal","Calendario","EDICA"],["docs","Documentos","EDICA"],["roles","Roles y accesos","CA"]];
+const INSL={"I-01":AMB[1],"I-02":AMB[2]},CONV={"I-01":1,"I-02":0};
+let S,U=null,V="mis",M="",Q={};
+const $=s=>document.querySelector(s),rol=u=>u[0],ca=()=>"CA".includes(rol(U)),fd=d=>d?d.split("-").reverse().join("/"):"—";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const home=()=>({E:"mis",D:"pend",I:"cupos"}[rol(U)]||"req"),students=()=>Object.keys(N).filter(k=>k[0]=="E");
+const hab=e=>S.teo.has(e)&&S.bio.has(e),falta=e=>[!S.teo.has(e)&&"teoría",!S.bio.has(e)&&"bioseguridad"].filter(Boolean).join(" y ");
+const rotOf=id=>S.rot.find(r=>r.id==id),cupoOf=id=>S.cupos.find(c=>c.id==id),nid=a=>Math.max(0,...a.map(x=>x.id))+1;
+const rt=r=>AMB[r.a-1]+" · "+(EXT[r.a-1]?"Externa":"Interna")+" · "+fd(r.i)+" al "+fd(r.f);
+const msgb=(h,t)=>`<div class="m" role="alert"><b>${h}</b><br>${t||""}</div>`;
+const CH={"Validada":"ok","Aprobada":"ok","Aprobado":"ok","Sí":"ok","Según lo previsto":"ok","Pendiente de validación":"wa","Pendiente":"wa","No":"wa","Sin instructor":"wa","Externa":"ex","Interna":"in"};
+const cell=x=>CH[x]?`<span class="ch ${CH[x]}">${x}</span>`:(typeof x=="string"&&x.startsWith("Reprogramada")?`<span class="ch wa">${x}</span>`:x);
+const tb=(h,rows)=>`<table><tr>${h.map(x=>"<th>"+x).join("")}</tr>${rows.map(r=>"<tr>"+r.map(x=>"<td>"+cell(x)).join("")+"</tr>").join("")}</table>`;
+const v=id=>$("#"+id)?.value||"";
+function seed(){S={
+rot:[[1,"E-01",1,"D-01","2026-09-01","2026-09-30"],[2,"E-01",1,"D-01","2026-10-01","2026-10-31"],[3,"E-02",2,"D-01","2026-10-01","2026-10-31"],[4,"E-03",1,"D-01","2026-10-01","2026-10-31"],[5,"E-04",3,"D-02","2026-10-01","2026-10-31"],[6,"E-05",3,null,"2026-10-01","2026-10-31"]].map(([id,e,a,d,i,f])=>({id,e,a,d,i,f})),
+teo:new Set(["E-01","E-02","E-04"]),bio:new Set(["E-01","E-04"]),
+act:[[1,2,"2026-10-01","Higiene de manos"],[2,2,"2026-10-05","Control de signos vitales en maniquí"],[3,2,"2026-10-06","Curación simulada en maniquí"],[4,2,"2026-10-31","Control de signos vitales"],[5,1,"2026-09-30","Higiene de manos"],[6,3,"2026-10-02","Actividad previa"],[7,5,"2026-10-08","Toma de presión arterial"],[8,5,"2026-10-08","Toma de presión arterial"],[9,6,"2026-10-12","Registro de signos"]].map(([id,r,f,t])=>({id,r,f,t})),
+val:{1:["D-01","2026-10-02"],2:["D-01","2026-10-06"],5:["D-01","2026-10-01"],7:["D-02","2026-10-09"]},
+cal:[{id:1,t:"Inicio de rotaciones en sala de simulación",f:"2026-10-01"},{id:2,t:"Entrega de la libreta de prácticas",f:"2026-11-20",o:"2026-11-13",m:"Atraso en la verificación de teoría y bioseguridad"},{id:3,t:"Inicio de prácticas externas",f:"2026-11-24"},{id:4,t:"Cierre del registro de horas de extensión",f:"2026-12-15"}],
+hor:[{id:1,e:"E-01",f:"2026-10-03",h:4,t:"Jornada de vacunación ficticia"},{id:2,e:"E-01",f:"2026-10-17",h:3,t:"Charla comunitaria ficticia"},{id:3,e:"E-04",f:"2026-10-10",h:5,t:"Campaña de higiene de manos ficticia"}],
+cupos:[{id:1,l:AMB[1],n:2,ins:"I-01"},{id:2,l:AMB[2],n:3,ins:null}],asig:{"E-01":1,"E-04":2},
+docs:[{id:1,t:"Reglamento de prácticas",tp:"Reglamento",c:"Contenido ficticio del reglamento de prácticas.",ro:"EDICA"},{id:2,t:"Manual del estudiante en prácticas",tp:"Manual",c:"Contenido ficticio del manual del estudiante.",ro:"ECA"},{id:3,t:"Guía del docente tutor",tp:"Guía",c:"Contenido ficticio de la guía del docente tutor.",ro:"DCA"},{id:4,t:"Guía del instructor de campo",tp:"Guía",c:"Contenido ficticio de la guía del instructor de campo.",ro:"ICA"},{id:5,t:"Manual de coordinación y calendario",tp:"Manual",c:"Contenido ficticio del manual de coordinación.",ro:"CA"}]}}
+const VIEWS={
+mis(){const t=Q.tipo||"",rows=S.act.filter(a=>rotOf(a.r).e==U&&(!t||!!EXT[rotOf(a.r).a-1]==(t=="ext"))).sort((a,b)=>a.f<b.f?-1:1);
+return `<h1>Mis actividades</h1><p class="s">Libreta de prácticas digital · ${U} ${N[U]} · datos ficticios</p><div class="c"><div class="row"><div><label>Tipo de práctica</label><select onchange="Q.tipo=this.value;render()"><option value="">Todas</option><option value="int" ${t=="int"?"selected":""}>Interna</option><option value="ext" ${t=="ext"?"selected":""}>Externa</option></select></div></div><br>`+
+(rows.length?tb(["Fecha","Actividad","Ámbito","Tipo","Estado","Validó"],rows.map(a=>{const r=rotOf(a.r),x=S.val[a.id];return[fd(a.f),esc(a.t),AMB[r.a-1],EXT[r.a-1]?"Externa":"Interna",x?"Validada":"Pendiente de validación",x?x[0]+" · "+fd(x[1]):"—"]})):"<p>No tiene actividades.</p>")+`<p class="n">«—» = todavía no hay constancia del docente tutor.</p></div>`},
+reg(){const mine=S.rot.filter(r=>r.e==U),f=Q.rg||{};if(!mine.length)return msgb("No tiene rotaciones asignadas","Consulte a su docente tutor.");
+return `<h1>Registrar actividad de práctica</h1><div class="c"><label>Rotación (obligatorio)</label><select id="rr"><option value="">— Elija una rotación —</option>${mine.map(r=>`<option value="${r.id}" ${f.r==r.id?"selected":""}>${rt(r)}</option>`).join("")}</select><label>Fecha (obligatorio)</label><input type="date" id="rf" value="${f.f||""}"><label>Descripción (obligatorio)</label><textarea id="rd" rows="3">${esc(f.t)}</textarea><p class="n">El docente tutor validará la actividad después.</p><button onclick="doReg()">Registrar actividad</button></div>`},
+ext(){if(rol(U)!="E")return `<h1>Horas de extensión</h1><div class="c">${tb(["Estudiante","Registros","Horas acumuladas"],students().map(e=>{const l=S.hor.filter(x=>x.e==e);return[e+" "+N[e],l.length,l.reduce((s,x)=>s+x.h,0)]}))}</div>`;
+const l=S.hor.filter(x=>x.e==U),f=Q.ex||{};return `<h1>Horas de extensión</h1><div class="c"><b>Registrar horas</b><label>Fecha</label><input type="date" id="xf" value="${f.f||""}"><label>Horas (1 a 12)</label><input type="number" id="xh" min="1" max="12" value="${f.h||""}"><label>Descripción</label><textarea id="xt" rows="2">${esc(f.t)}</textarea><p><button onclick="doExt()">Registrar horas</button></p></div><div class="c"><b>Mis horas</b>${l.length?tb(["Fecha","Actividad","Horas"],l.map(x=>[fd(x.f),esc(x.t),x.h]))+`<p><b>Total: ${l.reduce((s,x)=>s+x.h,0)} horas</b></p>`:"<p>Todavía no registró horas.</p>"}</div>`},
+pend(){const rows=S.act.filter(a=>rotOf(a.r).d==U&&!S.val[a.id]);return `<h1>Pendientes de validación</h1><p class="s">Docente tutor: ${U} ${N[U]}</p><div class="c">${rows.length?tb(["Fecha","Estudiante","Actividad","Ámbito","Acción"],rows.map(a=>[fd(a.f),rotOf(a.r).e,esc(a.t),AMB[rotOf(a.r).a-1],`<button class="g" onclick="validar(${a.id})">Validar</button>`])):"<p>No tiene actividades pendientes.</p>"}</div>`},
+req(){return `<h1>Requisitos previos a la práctica externa</h1><p class="s">Teoría y curso de bioseguridad · sin ambos, no queda habilitado</p><div class="c">${tb(["Estudiante","Teoría","Bioseguridad","Habilitado","Cambiar"],students().map(e=>[e+" "+N[e],S.teo.has(e)?"Aprobada":"Pendiente",S.bio.has(e)?"Aprobado":"Pendiente",hab(e)?"Sí":"No",`<div class="row"><button class="g" onclick="tog('${e}','teo')">Teoría</button><button class="g" onclick="tog('${e}','bio')">Bioseguridad</button></div>`]))}<p class="n">Un estudiante no habilitado no puede registrar actividades externas ni recibir cupo.</p></div>`},
+cupos(){let h=`<h1>Prácticas externas</h1><p class="s">Cupos por lugar · simulación local de «MARCO» (integración real pendiente de investigar)</p>`;
+if(rol(U)=="E"){const c=S.asig[U]&&cupoOf(S.asig[U]);return h+`<div class="c"><p><b>Su cupo:</b> ${c?esc(c.l)+(c.ins?" · instructor de campo: "+c.ins+" "+N[c.ins]:""):"sin cupo asignado"}<br><b>Requisitos:</b> teoría ${S.teo.has(U)?"aprobada":"pendiente"} · bioseguridad ${S.bio.has(U)?"aprobada":"pendiente"}</p></div>`}
+const l=S.cupos.filter(c=>rol(U)!="I"||c.ins==U);if(rol(U)=="I")h+=`<p class="n">Su acompañamiento se realiza fuera de servicio, amparado por el convenio institucional.</p>`;
+h+=`<div class="c">${l.length?tb(["N.º","Lugar","Cupos","Asignados","Libres","Instructor de campo","Estudiantes"],l.map(c=>{const es=Object.keys(S.asig).filter(e=>S.asig[e]==c.id).sort();return[c.id,esc(c.l),c.n,es.length,c.n-es.length,c.ins?c.ins+" "+N[c.ins]:"Sin instructor",es.map(e=>e+" "+N[e]).join("<br>")||"—"]})):"<p>No tiene cupos asignados.</p>"}</div>`;
+if(ca()){const oc=S.cupos.map(c=>`<option value="${c.id}">${c.id} · ${esc(c.l)}</option>`).join("");
+h+=`<div class="c"><b>Cargar cupos</b><label>Lugar externo</label><select id="cl"><option>${AMB[1]}</option><option>${AMB[2]}</option></select><label>Cantidad (1 a 30)</label><input type="number" id="cn" min="1" max="30" value="1"><p><button onclick="doCupo('nuevo')">Agregar cupos</button></p></div>
+<div class="c"><b>Asignar estudiante</b><label>Estudiante</label><select id="ce">${students().map(e=>`<option value="${e}">${e} · ${N[e]}${hab(e)?"":" (no habilitado)"}</option>`).join("")}</select><label>Cupo</label><select id="cc">${oc}</select><p><button onclick="doCupo('asig')">Asignar estudiante</button></p></div>
+<div class="c"><b>Asignar instructor de campo</b><label>Cupo</label><select id="ck">${oc}</select><label>Instructor</label><select id="ci">${["I-01","I-02"].map(i=>`<option value="${i}">${i} · ${N[i]} · ${INSL[i]}</option>`).join("")}</select><label style="font-weight:400"><input type="checkbox" id="cf"> Confirmo que es funcionario del lugar y estará fuera de servicio durante el acompañamiento</label><p><button onclick="doCupo('ins')">Asignar instructor</button></p></div>`}return h},
+cal(){const ev=[...S.cal].sort((a,b)=>a.f<b.f?-1:1),rp=ev.filter(e=>e.o).length;
+return `<h1>Calendario de actividades</h1><p class="s">${rp} reprogramada${rp==1?"":"s"} · edita coordinación o administración (quién recalendariza queda por definir con el cliente)</p><div class="c">${tb(["Fecha","Actividad","Estado"].concat(ca()?["Reprogramar"]:[]),ev.map(e=>[fd(e.f),esc(e.t),e.o?`Reprogramada (antes ${fd(e.o)}) · ${esc(e.m)}`:"Según lo previsto"].concat(ca()?[`<div class="row"><input type="date" id="rf${e.id}"><input id="rm${e.id}" placeholder="Motivo"><button class="g" onclick="repro(${e.id})">Reprogramar</button></div>`]:[])))}</div>`+
+(ca()?`<div class="c"><b>Agregar actividad</b><label>Actividad</label><input id="nt"><label>Fecha</label><input type="date" id="nf"><p><button onclick="addEv()">Agregar al calendario</button></p></div>`:"")},
+docs(){const r=rol(U);
+if(Q.doc){const d=S.docs.find(x=>x.id==Q.doc&&x.ro.includes(r));if(!d)return msgb("Documento no disponible","No está habilitado para su perfil.");
+let pv="";const f=d.file;if(f){pv=`<p><b>Archivo:</b> ${esc(f.name)} · ${kb(f.size)}</p>`+(f.type.startsWith("image/")?`<img src="${f.url}" alt="${esc(f.name)}" style="max-width:100%;border-radius:8px">`:f.text!=null?`<pre style="white-space:pre-wrap;background:var(--th);padding:12px;border-radius:8px">${esc(f.text)}</pre>`:`<p class="n">Este tipo de archivo no tiene vista previa aquí.</p>`)+`<p><a class="dl" href="${f.url}" download="${esc(f.name)}">Descargar archivo</a></p>`}
+return `<h1>${esc(d.t)}</h1><div class="c"><p><b>Tipo:</b> ${d.tp}${d.c?"<br>"+esc(d.c):""}</p>${pv}</div><button class="g" onclick="Q.doc=0;render()">Volver a documentos</button>`}
+return `<h1>Documentos</h1><p class="s">Reglamentos, manuales y guías habilitados para su perfil (${ROLN[r]}) · contenido de ejemplo</p><div class="c">${tb(["Documento","Tipo","Archivo","Acción"],S.docs.filter(d=>d.ro.includes(r)).map(d=>[esc(d.t),d.tp,d.file?esc(d.file.name):"—",`<button class="g" onclick="Q.doc=${d.id};render()">Abrir</button>`]))}</div>`+
+(ca()?`<div class="c"><b>Digitalizar un documento</b><label for="dt">Título</label><input id="dt"><label for="dp">Tipo</label><select id="dp"><option>Reglamento</option><option>Manual</option><option>Guía</option></select><label for="dc">Contenido (obligatorio si no adjunta archivo)</label><textarea id="dc" rows="3"></textarea><label for="df">Archivo (opcional, hasta 2 MB: PDF, imagen, texto, Word, Excel o PowerPoint)</label><input type="file" id="df" accept=".pdf,.png,.jpg,.jpeg,.gif,.webp,.txt,.doc,.docx,.xls,.xlsx,.ppt,.pptx"><label>Lo ven (coordinación y administración siempre)</label><div class="row"><label style="font-weight:400"><input type="checkbox" id="dE" checked> Estudiante</label><label style="font-weight:400"><input type="checkbox" id="dD" checked> Docente</label><label style="font-weight:400"><input type="checkbox" id="dI" checked> Instructor</label></div><p><button onclick="addDoc()">Publicar documento</button></p></div>`:"")},
+roles(){const R=["E","D","I","C","A"];return `<h1>Roles y accesos</h1><p class="s">Propuesta provisional: el acta deja pendiente confirmar qué desbloquea cada rol</p><div class="c">${tb(["Módulo"].concat(R.map(k=>ROLN[k])),MOD.map(m=>[m[1]].concat(R.map(k=>m[2].includes(k)?"Sí":"—"))))}</div>`}};
+const PASS="enfermeria2026",kb=n=>n<1024?n+" B":n<1048576?(n/1024).toFixed(0)+" KB":(n/1048576).toFixed(1)+" MB";
+function loginView(){return `<div class="c lc"><h1>Iniciar sesión</h1><p class="s">Prototipo con cuentas ficticias. Ingrese su usuario (código o nombre) y su contraseña.</p>${Q.le?msgb("No se pudo iniciar sesión",Q.le):""}
+<label for="lu">Usuario</label><input id="lu" autocomplete="username" value="${esc(Q.lu||"")}"><label for="lp">Contraseña</label><input id="lp" type="password" autocomplete="current-password" value="${esc(Q.lp||"")}" onkeydown="if(event.key=='Enter')login()"><p><button onclick="login()">Iniciar sesión</button></p></div>
+<div class="c"><b>Cuentas de prueba</b><p class="n">Contraseña de todas las cuentas: <b>${PASS}</b>. Es un prototipo: la contraseña se valida en este navegador y no protege datos reales.</p>${tb(["Usuario","Nombre","Perfil","Acción"],Object.keys(N).map(k=>[k,N[k],ROLN[rol(k)],`<button class="g" onclick="Q={lu:'${k}',lp:'${PASS}'};render()">Usar</button>`]))}</div>`}
+function login(){const n=v("lu").trim(),p=v("lp"),k=Object.keys(N).find(x=>x.toLowerCase()==n.toLowerCase()||N[x].toLowerCase()==n.toLowerCase());
+if(!n||!p){Q={lu:n,le:"Complete el usuario y la contraseña."};return render()}
+if(!k||p!==PASS){Q={lu:n,le:"Usuario o contraseña incorrectos. Revise los datos e intente de nuevo."};return render()}
+U=k;V=home();Q={};M="";render()}
+function logout(){U=null;Q={};M="";render()}
+function render(){document.body.classList.toggle("out",!U);
+if(!U){$("#ses").innerHTML="";$("#nav").innerHTML="";$("#main").innerHTML=loginView();return}
+$("#ses").innerHTML=`<span class="rol">${ROLN[rol(U)]}</span><span class="who">${U} · ${N[U]}</span><button class="g" onclick="logout()">Cerrar sesión</button><button class="g" onclick="seed();M='Datos reiniciados.';V=home();render()">Reiniciar datos</button>`;
+const mods=MOD.filter(m=>m[2].includes(rol(U)));if(!mods.some(m=>m[0]==V))V=home();
+$("#nav").innerHTML=mods.map(m=>`<button class="${m[0]==V?"on":""}" onclick="V='${m[0]}';M='';Q={};render()">${m[1]}</button>`).join("");
+$("#main").innerHTML=M+VIEWS[V]();M=""}
+const fail=(h,t)=>{M=msgb(h,t);render()},ok=t=>{M=`<div class="c"><b>${t}</b></div>`;render()};
+function doReg(){const f=Q.rg={r:v("rr"),f:v("rf"),t:v("rd").trim()},r=rotOf(f.r),er=[];
+if(!r||r.e!=U)er.push("elija la rotación");if(!f.f)er.push("indique la fecha");if(!f.t)er.push("describa la actividad");
+if(er.length)return fail("Revise "+er.length+" dato"+(er.length>1?"s":""),er.join("; ")+".");
+if(EXT[r.a-1]&&!hab(U))return fail("No se registró la actividad","Rotación externa: no consta la aprobación de "+falta(U)+". Sus datos se conservan. Consulte a coordinación.");
+S.act.push({id:nid(S.act),r:r.id,f:f.f,t:f.t});Q.rg=null;V="mis";ok("Actividad registrada · estado: Pendiente de validación.")}
+function doExt(){const f=Q.ex={f:v("xf"),h:+v("xh"),t:v("xt").trim()},er=[];if(!f.f)er.push("indique la fecha");if(!(f.h>=1&&f.h<=12))er.push("horas entre 1 y 12");if(!f.t)er.push("describa la actividad");
+if(er.length)return fail("No se registraron las horas",er.join("; ")+".");S.hor.push({id:nid(S.hor),e:U,...f});Q.ex=null;ok("Horas registradas.")}
+function validar(id){S.val[id]=[U,HOY];ok("Actividad validada: constancia con docente y fecha "+fd(HOY)+".")}
+function tog(e,k){const s=S[k];s.has(e)?s.delete(e):s.add(e);ok("Requisito actualizado.")}
+function doCupo(a){let c=cupoOf(a=="asig"?v("cc"):v("ck")),e=v("ce"),i=v("ci");
+if(a=="nuevo"){const n=+v("cn");if(!(n>=1&&n<=30))return fail("No se realizó el cambio","cantidad entre 1 y 30.");S.cupos.push({id:nid(S.cupos),l:v("cl"),n,ins:null})}
+else if(!c)return fail("No se realizó el cambio","elija un cupo.");
+else if(a=="asig"){if(!hab(e))return fail("No se realizó el cambio","el estudiante no está habilitado: falta aprobar "+falta(e)+".");
+if(Object.keys(S.asig).filter(x=>S.asig[x]==c.id&&x!=e).length>=c.n)return fail("No se realizó el cambio","no quedan cupos libres en «"+c.l+"».");S.asig[e]=c.id}
+else{if(INSL[i]!=c.l)return fail("No se realizó el cambio","el instructor no es funcionario de «"+c.l+"».");if(!CONV[i])return fail("No se realizó el cambio","no consta convenio institucional vigente para ese instructor.");
+if(!$("#cf").checked)return fail("No se realizó el cambio","confirme que el instructor estará fuera de servicio durante el acompañamiento.");c.ins=i}
+ok("Cambio guardado.")}
+function repro(id){const e=S.cal.find(x=>x.id==id),f=v("rf"+id),m=v("rm"+id).trim();
+if(!f)return fail("No se realizó el cambio","indique una fecha válida.");if(!m)return fail("No se realizó el cambio","indique el motivo de la reprogramación.");if(f==e.f)return fail("No se realizó el cambio","la nueva fecha es igual a la actual.");
+e.o=e.o||e.f;e.f=f;e.m=m;ok("Actividad reprogramada.")}
+function addEv(){const t=v("nt").trim(),f=v("nf");if(!t||!f)return fail("No se realizó el cambio","indique actividad y fecha.");S.cal.push({id:nid(S.cal),t,f});ok("Actividad agregada.")}
+function addDoc(){const t=v("dt").trim(),c=v("dc").trim(),fl=$("#df").files[0],tp=v("dp");
+if(!t||(!c&&!fl))return fail("No se publicó el documento","escriba el título y un contenido, o adjunte un archivo.");
+if(fl&&fl.size>2097152)return fail("No se publicó el documento","el archivo supera los 2 MB.");
+if(fl&&!/\.(pdf|png|jpe?g|gif|webp|txt|docx?|xlsx?|pptx?)$/i.test(fl.name))return fail("No se publicó el documento","tipo de archivo no permitido. Use PDF, imagen, texto, Word, Excel o PowerPoint.");
+const ro="CA"+["E","D","I"].filter(k=>$("#d"+k).checked).join(""),fin=file=>{S.docs.push({id:nid(S.docs),t,tp,c,ro,file});ok("Documento publicado.")};
+if(!fl)return fin(null);
+const r1=new FileReader();r1.onerror=()=>fail("No se publicó el documento","no se pudo leer el archivo.");
+r1.onload=()=>{const f={name:fl.name,type:fl.type||"application/octet-stream",size:fl.size,url:r1.result};
+if(f.type.startsWith("text/")){const r2=new FileReader();r2.onload=()=>{f.text=r2.result;fin(f)};r2.readAsText(fl)}else fin(f)};r1.readAsDataURL(fl)}
+seed();render();
+</script></body></html>
